@@ -1,2 +1,7 @@
 #!/usr/bin/python3
-listint_t *insert_node(listint_t **head, int number);
+for i in range(0, 100):
+    if (i // 10) < (i % 10):
+        if i != 89:
+            print("{:02d}, ".format(i), end='')
+        else:
+            print("{:02d}".format(i))
