@@ -10,9 +10,11 @@ if __name__ == "__main__":
         dos = int(argv[3])
         if argv[2] == '+':
             print("{:d} + {:d} = {:d}".format(uno, dos, add(uno, dos)))
-        if argv[2] == '-':
+        elif argv[2] == '-':
             print("{:d} - {:d} = {:d}".format(uno, dos, sub(uno, dos)))
-        if argv[2] == '*':
+        elif argv[2] == '*':
             print("{:d} * {:d} = {:d}".format(uno, dos, mul(uno, dos)))
-        if argv[2] == '/':
+        elif argv[2] == '/':
             print("{:d} / {:d} = {:d}".format(uno, dos, div(uno, dos)))
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
