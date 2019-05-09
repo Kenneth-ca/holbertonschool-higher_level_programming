@@ -9,18 +9,28 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp;
-    int length = 0;
-    char buffer[10000];
+	int length = 0, initial = 0;
+	char buffer[10000];
 
 	if (*head == NULL)
 		return (0);
 	temp = *head;
 	while (temp != NULL)
 	{
-        length++;
-        buffer[length] = temp->n;
+		buffer[length] = temp->n;
+		length++;
 		temp = temp->next;
 	}
-    printf("%s", buffer);
+	length--;
+	while (initial < length)
+	{
+		if (buffer[initial] == buffer[length])
+		{
+			initial++;
+			length--;
+		}
+		else
+			return (0);
+	}
 	return (1);
 }
