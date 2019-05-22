@@ -29,6 +29,7 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
+            return
         for j in range(self.__position[1]):
             print()
         for i in range(self.__size):
@@ -39,7 +40,7 @@ class Square:
     def position(self):
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         if type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
