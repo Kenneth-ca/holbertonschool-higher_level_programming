@@ -21,6 +21,14 @@ Now use it:
     Traceback (most recent call last):
     ValueError: size must be >= 0
 
+    >>> print_square(2.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
     >>> print_square('a')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(None)
     Traceback (most recent call last):
     TypeError: size must be an integer
