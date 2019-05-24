@@ -23,9 +23,13 @@ Now use it:
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name(, "Wolf")
+    >>> say_my_name(None, "Wolf")
     Traceback (most recent call last):
-    SyntaxError: invalid syntax
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Aha", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
 
     >>> say_my_name("Hola", )
     My name is Hola 
