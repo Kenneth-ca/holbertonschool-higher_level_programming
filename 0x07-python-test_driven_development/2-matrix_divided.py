@@ -8,6 +8,8 @@ def matrix_divided(matrix, div):
     """ A function that  divides a matrix"""
     text = "matrix must be a matrix (list of lists) of integers/floats"
     text_2 = "Each row of the matrix must have the same size"
+    if matrix is None:
+        raise TypeError(text)
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
