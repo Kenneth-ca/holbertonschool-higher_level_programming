@@ -1,0 +1,77 @@
+The ``matrix_mul`` module
+======================
+
+Using ``matrix_mul``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add`` from the ``0-add_integer`` module:
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Now use it:
+
+    >>> matrix = [
+    ...    [1, 2],
+    ...    [3, 4]
+    ... ]
+
+    >>> matrix_2 = [
+    ...    [1, 2],
+    ...    [3, 4]
+    ... ]
+
+    >>> matrix_mul(matrix, matrix_2)
+    [[7, 10], [15, 22]]
+
+    >>> matrix_mul(56, matrix_2)
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+    >>> matrix_mul(matrix, 22)
+    Traceback (most recent call last):
+    TypeError: m_b must be a list
+
+    >>> list = [1, 4, 5, 6]
+
+    >>> matrix_mul(list, 22)
+    Traceback (most recent call last):
+    TypeError: m_a must be a list of lists
+
+    >>> matrix_mul(3, list)
+    Traceback (most recent call last):
+    TypeError: m_b must be a list of lists
+
+    >>> matrix_mul([], matrix_2)
+    Traceback (most recent call last):
+    ValueError: m_a can't be empty
+
+    >>> matrix_mul(matrix, [])
+    Traceback (most recent call last):
+    ValueError: m_b can't be empty
+
+    >>> no_integer = [
+    ...    ['a', 2],
+    ...    [3, 4]
+    ... ]
+
+    >>> matrix_mul(no_integer, matrix_2)
+    Traceback (most recent call last):
+    TypeError: m_a should contain only integers or floats
+
+    >>> matrix_mul(matrix, no_integer)
+    Traceback (most recent call last):
+    TypeError: m_b should contain only integers or floats
+
+    >>> dif = [
+    ...    ['a', 2],
+    ...    [3, 4, 5]
+    ... ]
+
+    >>> matrix_mul(dif, matrix_2)
+    Traceback (most recent call last):
+    TypeError: each row of m_a must should be of the same size
+
+    >>> matrix_mul(matrix, dif)
+    Traceback (most recent call last):
+    TypeError: each row of m_b must should be of the same size
