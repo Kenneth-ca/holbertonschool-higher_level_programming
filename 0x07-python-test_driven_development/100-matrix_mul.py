@@ -19,21 +19,22 @@ def matrix_mul(m_a, m_b):
     len_1 = len(m_a[0])
     len_2 = len(m_b[0])
     column_A = len_1
+
     row_B = len(m_b[0])
     # Number of colums of A must be equal to rows of B
     if column_A != row_B:
         raise ValueError("m_a and m_b can't be multiplied")
-    for i in range(len_1):
+    for a in m_a:
         inside = []
-        if type(m_a[i]) is not list:
+        if type(a) is not list:
             raise TypeError("m_a must be a list of lists")
-        if len(m_a[i]) != len_1:
+        if len(a) != len_1:
             raise TypeError(error_1)
-        if m_a[i] == []:
+        if a == []:
             raise ValueError("m_a can't be empty")
-        for j in range(len(m_a[i])):
-            if type(m_a[i][j]) is not int:
-                if type(m_a[i][j]) is not float:
+        for aa in a:
+            if type(aa) is not int:
+                if type(aa) is not float:
                     raise TypeError("")
     for i in range(len_2):
         if type(m_b[i]) is not list:
