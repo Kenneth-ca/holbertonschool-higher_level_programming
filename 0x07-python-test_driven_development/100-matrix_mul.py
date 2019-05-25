@@ -47,13 +47,3 @@ def matrix_mul(m_a, m_b):
             if type(m_b[i][j]) is not int:
                 if type(m_b[i][j]) is not float:
                     raise TypeError("")
-    # Here we make the multiplication
-    new_matrix = []
-    mul = 0
-    for i in range(column_A):
-        inside = []
-        for j in range(row_B):
-            mul += m_a[i][j] * m_b[j][i]
-            inside.append(mul)
-        new_matrix.append(inside)
-    return new_matrix
