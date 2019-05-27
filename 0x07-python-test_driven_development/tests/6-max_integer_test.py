@@ -25,10 +25,10 @@ class TestMaxInteger(unittest.TestCase):
         """empty case"""
         self.assertEqual(None, max_integer())
 
-    def test_work(self):
+    def test_1list(self):
         """Normal output"""
-        a_list = [1, 2, 3]
-        self.assertEqual(3, max_integer(a_list))
+        a_list = [1]
+        self.assertEqual(1, max_integer(a_list))
 
     def test_none(self):
         """none"""
