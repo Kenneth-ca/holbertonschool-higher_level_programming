@@ -91,3 +91,16 @@ class Rectangle(Base):
         w = str(self.width)
         h = str(self.height)
         return "[Rectangle] (" + id + ") " + x + "/" + y + " - " + w + "/" + h
+
+    def update(self, *args):
+        for i in range(len(args)):
+            if i == 0:
+                super().__init__(args[i])
+            elif i == 1:
+                self.width = args[i]
+            elif i == 2:
+                self.height = args[i]
+            elif i == 3:
+                self.x = args[i]
+            elif i == 4:
+                self.y = args[i]
