@@ -38,7 +38,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -50,7 +50,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.__y = value
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -72,6 +72,8 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.width = width
         self.height = height
+        self.x = x
+        self.y = y
 
     def area(self):
         return self.__width * self. __height
@@ -79,3 +81,11 @@ class Rectangle(Base):
     def display(self):
         for i in range(self.height):
             print("#" * self.__width)
+
+    def __str__(self):
+        id = str(self.id)
+        x = str(self.x)
+        y = str(self.y)
+        w = str(self.width)
+        h = str(self.height)
+        return "[Rectangle] (" + id + ") " + x + "/" + y + " - " + w + "/" + h
