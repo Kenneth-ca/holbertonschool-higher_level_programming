@@ -24,3 +24,14 @@ class Square(Rectangle):
         """Str for square"""
         return ("[Square] ({}) {}/{} - {}".
                 format(self.id, self.x, self.y, self.width))
+
+    def update(self, *args, **kwargs):
+        """A function that updates"""
+        new_list = ["id", "size", "x", "y"]
+        if args and args != "":
+            for i in range(len(args)):
+                setattr(self, new_list[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                for i in range(len(new_list)):
+                    setattr(self, key, value)
