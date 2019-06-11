@@ -35,3 +35,9 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 for i in range(len(new_list)):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Square instance to dictionary"""
+        new_dict = {'id': self.id, 'x': self.x, 'size': self.width,
+                    'y': self.y}
+        return new_dict
