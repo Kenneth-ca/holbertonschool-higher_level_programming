@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Module for Rectangle"""
     @property
     def width(self):
-        """Width"""
+        """Width and all"""
         return self.__width
 
     @width.setter
@@ -21,7 +21,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Height"""
+        """Height very high"""
         return self.__height
 
     @height.setter
@@ -35,7 +35,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """X"""
+        """X not just x"""
         return self.__x
 
     @x.setter
@@ -49,7 +49,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Y"""
+        """Y why"""
         return self.__y
 
     @y.setter
@@ -90,14 +90,14 @@ class Rectangle(Base):
         return self.__width * self. __height
 
     def display(self):
-        """Display"""
+        """Display it all"""
         for j in range(self.y):
             print()
         for i in range(self.height):
             print(" " * self.x + "#" * self.__width)
 
     def __str__(self):
-        """Str"""
+        """Str is for string"""
         id = str(self.id)
         x = str(self.x)
         y = str(self.y)
@@ -106,7 +106,7 @@ class Rectangle(Base):
         return "[Rectangle] (" + id + ") " + x + "/" + y + " - " + w + "/" + h
 
     def update(self, *args, **kwargs):
-        """Update"""
+        """Update it please"""
         if args:
             for i in range(len(args)):
                 if i == 0:
