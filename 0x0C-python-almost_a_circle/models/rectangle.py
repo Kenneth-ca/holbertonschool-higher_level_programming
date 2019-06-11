@@ -107,27 +107,11 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Update it please"""
-        if args:
+        new_list = ["id", "width", "height", "x", "y"]
+        if args and args != "":
             for i in range(len(args)):
-                if i == 0:
-                    super().__init__(args[i])
-                elif i == 1:
-                    self.width = args[i]
-                elif i == 2:
-                    self.height = args[i]
-                elif i == 3:
-                    self.x = args[i]
-                elif i == 4:
-                    self.y = args[i]
+                setattr(self, new_list[i], args[i])
         else:
             for key, value in kwargs.items():
-                if key == "id":
-                    self.id = value
-                elif key == "width":
-                    self.width = value
-                elif key == "height":
-                    self.height = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+                for i in range(len(new_list)):
+                    setattr(self, key, value)
