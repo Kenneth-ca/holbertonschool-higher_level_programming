@@ -92,7 +92,7 @@ class Rectangle(Base):
         h = str(self.height)
         return "[Rectangle] (" + id + ") " + x + "/" + y + " - " + w + "/" + h
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         for i in range(len(args)):
             if i == 0:
                 super().__init__(args[i])
@@ -104,3 +104,6 @@ class Rectangle(Base):
                 self.x = args[i]
             elif i == 4:
                 self.y = args[i]
+        if kwargs is not None and args is None:
+            for key, value int kwargs.iteritems():
+                if key == id:
