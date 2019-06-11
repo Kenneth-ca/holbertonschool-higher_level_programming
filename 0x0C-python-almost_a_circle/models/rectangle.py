@@ -116,3 +116,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 for i in range(len(new_list)):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """This returns a dictionary representation"""
+        return self.__dict__
