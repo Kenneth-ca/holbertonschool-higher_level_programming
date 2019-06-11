@@ -105,5 +105,14 @@ class Rectangle(Base):
             elif i == 4:
                 self.y = args[i]
         if kwargs is not None and args is None:
-            for key, value int kwargs.iteritems():
-                if key == id:
+            for key, value in kwargs.iteritems():
+                if key == self.__id:
+                    self.__id = value
+                if key == self.__width:
+                    self.__width = value
+                if key == self.__height:
+                    self.__height = value
+                if key == self.__x:
+                    self.__x = value
+                if key == self.__y:
+                    self.__y = value
