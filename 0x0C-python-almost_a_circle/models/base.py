@@ -41,3 +41,10 @@ class Base:
         if json_string:
             new_list = json.loads(json_string)
         return new_list
+
+    @classmethod
+    def create(cls, **dictionary):
+        """This creates a dummy and updates it"""
+        ins = cls(2, 5)
+        ins.update(**dictionary)
+        return ins
