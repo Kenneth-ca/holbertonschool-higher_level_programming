@@ -34,3 +34,10 @@ class Base:
         with open(filename, "w") as f:
             string = cls.to_json_string(new_list)
             f.write(string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        new_list = []
+        if json_string:
+            new_list = json.loads(json_string)
+        return new_list
