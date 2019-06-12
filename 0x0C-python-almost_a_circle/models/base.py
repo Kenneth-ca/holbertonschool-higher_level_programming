@@ -66,3 +66,19 @@ class Base:
                 return new_list
         except:
             return new_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Comment to save csv"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w') as f:
+            for i in list_objs:
+                store = json.dumps(i)
+            f.write(store)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads from a csv file"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'r') as f:
+            return json.loads(f.read())
