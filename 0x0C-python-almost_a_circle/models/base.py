@@ -51,3 +51,18 @@ class Base:
             ins = cls(2, 5)
         ins.update(**dictionary)
         return ins
+
+    @classmethod
+    def load_from_file(cls):
+        """A function that loads from a file"""
+        filename = cls.__name__ + ".json"
+        new_list = []
+        try:
+            with open(filename, "r") as f:
+                lines = json.load(f)
+                converted = cls.from_json_string(lines)
+                for i in converted:
+                    new_list.append(cls.create(converted))
+                return new_list
+        except:
+            return new_list
