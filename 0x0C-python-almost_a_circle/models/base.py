@@ -28,8 +28,9 @@ class Base:
         """Saves a string representation to a file"""
         filename = cls.__name__ + ".json"
         new_list = []
-        for i in list_objs:
-            new_list.append(i.to_dictionary())
+        if list_objs:
+            for i in list_objs:
+                new_list.append(i.to_dictionary())
         with open(filename, "w") as f:
             string = cls.to_json_string(new_list)
             f.write(string)
