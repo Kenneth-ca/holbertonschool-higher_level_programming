@@ -45,6 +45,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """This creates a dummy and updates it"""
-        ins = cls(2, 5)
-        ins.update(**dictionary)
-        return ins
+        if dictionary:
+            ins = cls(2, 5)
+            ins.update(**dictionary)
+            return ins
