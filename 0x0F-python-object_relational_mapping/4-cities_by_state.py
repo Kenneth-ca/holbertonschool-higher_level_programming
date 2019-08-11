@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""Protection against injection"""
+"""
+Protection against injection
+"""
+import MySQLdb
+from sys import argv
+
 if __name__ == "__main__":
-    import MySQLdb
-    from sys import argv
 
     db = MySQLdb.connect(host="127.0.0.1", user=argv[1], passwd=argv[2],
                          db=argv[3])
