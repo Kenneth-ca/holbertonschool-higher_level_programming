@@ -12,3 +12,5 @@ if __name__ == "__main__":
     res = var.fetchall()
     for i in res:
         print(i)
+    var.close()
+    db.close()
