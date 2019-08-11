@@ -7,11 +7,11 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    db = MySQLdb.connect(host="127.0.0.1", user=argv[1], passwd=argv[2],
+    db = MySQLdb.connect(host="localhost", user=argv[1], passwd=argv[2],
                          db=argv[3], port=3306)
     var = db.cursor()
-    var.execute("SELECT * FROM states\nWHERE %(id)s like name",
-                {'id': argv[4]})
+    var.execute("SELECT * FROM states\nWHERE name LIKE %s",
+                (argv[4], ))
     res = var.fetchall()
     for i in res:
         print(i)
