@@ -10,6 +10,6 @@ if __name__ == "__main__":
     try:
         url = sys.argv[1]
         with urllib.request.urlopen(url) as response:
-            print(response.info()['X-Request-Id'])
+            print(response.info()["X-Request-Id"])
     except:
         pass
