@@ -8,7 +8,8 @@ from sys import argv
 
 if __name__ == "__main__":
     try:
-        with urllib.request.urlopen(argv[1]) as response:
-            print(response.headers.get('X-Request-Id'))
+        url = argv[1]
+        with urllib.request.urlopen(url) as response:
+            print(response.info()['X-Request-Id'])
     except:
         pass
