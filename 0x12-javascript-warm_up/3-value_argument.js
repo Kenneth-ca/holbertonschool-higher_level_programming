@@ -1,7 +1,11 @@
 #!/usr/bin/node
-if (process.argv.length === 2) {
+let count = 0;
+process.argv.forEach((val, index, array) => {
+  count++;
+});
+if (count <= 2) {
   console.log('No argument');
 }
-if (process.argv.length > 2) {
+if (count > 2) {
   console.log(process.argv[2]);
 }
