@@ -6,6 +6,6 @@ fs.readFile(process.argv[2], 'utf-8', function (err, data) {
     console.log(err);
   }
   if (data) {
-    console.log(data.replace(/\r|\n$/, ''));
+    console.log(data);
   }
 });
