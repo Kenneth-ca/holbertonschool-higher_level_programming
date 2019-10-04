@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 $.ajax({
     url: "https://swapi.co/api/films/?format=json",
     type: "GET",

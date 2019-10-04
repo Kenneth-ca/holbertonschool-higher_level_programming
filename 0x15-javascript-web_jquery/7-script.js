@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 $.ajax({
     url: "https://swapi.co/api/people/5/?format=json",
     type: "GET",
