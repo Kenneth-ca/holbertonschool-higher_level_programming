@@ -9,7 +9,7 @@
 
 High level programming projects based mainly in Python language
 
-![](https://cdn.onlinewebfonts.com/svg/img_543552.png)
+![](https://icons.iconarchive.com/icons/designbolts/seo/256/Web-Development-icon.png)
 
 ### About me 🌐
 Economist who likes coding and do Machine Learning stuff.
