@@ -9,6 +9,8 @@
 
 High level programming projects based mainly in Python language
 
+![](https://cdn.onlinewebfonts.com/svg/img_543552.png)
+
 ### About me 🌐
 Economist who likes coding and do Machine Learning stuff.
 I love the sea, reading books and listen to music.
